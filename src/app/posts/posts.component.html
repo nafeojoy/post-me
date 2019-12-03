@@ -1,0 +1,12 @@
+<h1>All Posts:</h1>
+<!-- Host element for directive -->
+<p appRedBlack>Customr Directive</p> 
+
+<ul>
+    <li *ngFor='let post of posts'>
+        <strong>{{post.title}}</strong>
+        <p>{{post.body}}</p>
+        <button [disabled]= "!check" value="{{post.id}}" (click)="onCheck($event.target.value)">{{chengedValue}}</button>
+    </li>
+</ul>
+

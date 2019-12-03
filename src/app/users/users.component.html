@@ -1,0 +1,31 @@
+<h1>
+    Users 
+    <!-- {{message}} -->
+</h1>
+
+ <!-- Input Decorator Check -->
+<!-- <app-details [parentData]="name">
+</app-details> -->
+
+ <!-- Output Decorator Check -->
+<!-- <app-details (childEvent)="message=$event">
+</app-details> -->
+
+
+<ul [@listStagger]="users">
+    <!-- *ngFor/ *ngIf are Structural Directives -->
+    <li *ngFor="let user of users">
+        <a routerLink="/details/{{user.id}}">
+            {{user.name}}
+        </a>
+
+        <ul>
+            <li>{{user.email}}</li>
+            <li>
+                <a href="http://{{user.website}}">
+                    {{user.website}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+

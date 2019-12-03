@@ -1,0 +1,26 @@
+<!-- Input Decorator Check -->
+<!-- <h1>TEST KORI {{name}}</h1> -->
+
+<!-- Output Decorator Check -->
+<!-- <button (click)="fireEvent()"> Send Event</button> -->
+
+
+<div *ngIf='user; then yesDetails else noDetails'>
+</div>
+
+<ng-template #yesDetails>
+    <div>
+        <h1>
+            {{user?.name}}
+        </h1>
+        <ul>
+            <li><strong>Username:</strong> {{user?.username}}</li>
+            <li><strong>Email:</strong> {{user?.email}}</li>
+            <li><strong>Phone:</strong> {{user?.phone}}</li>
+        </ul>
+    </div>
+</ng-template>
+
+<ng-template #noDetails>
+    Not Available
+</ng-template>
